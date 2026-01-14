@@ -32,7 +32,7 @@ export default function Highlights() {
             {highlights.map((item, index) => (
               <div
                 key={index}
-                className="text-center px-6 py-8 rounded-2xl hover:bg-purple-100 transition shadow-sm transition-transform transform hover:scale-105 cursor-pointer"
+                className="text-center px-6 py-8 rounded-2xl hover:bg-purple-100 transition shadow-sm transition-transform transform hover:scale-105 cursor-pointer "
               >
                 <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mx-auto mb-4">
                   {item.icon}
