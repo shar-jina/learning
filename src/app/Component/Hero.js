@@ -28,7 +28,7 @@ export default function Hero() {
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrent((prev) => (prev + 1) % slides.length);
-    }, 5000);
+    }, 4000);
     return () => clearInterval(timer);
   }, []);
 
@@ -60,7 +60,7 @@ export default function Hero() {
       </div>
 
       {/* Arrows */}
-      <div className="absolute bottom-32 left-1/2 -translate-x-1/2 flex gap-6 z-20">
+      <div className="absolute bottom-48 left-1/2 -translate-x-1/2 flex gap-6 z-20">
         <button
           onClick={prevSlide}
           className="w-14 h-14 rounded-full flex items-center justify-center
