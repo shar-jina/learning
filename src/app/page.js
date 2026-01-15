@@ -4,6 +4,8 @@ import FacilitiesSection from "./Component/Facility";
 import AboutSection from "./Component/About";
 import OurBooks from "./Component/Ourbook";
 import ServicesSection from "./Component/Service";
+import ContactSection from "./Component/Contact";
+
 
 
 
@@ -20,6 +22,7 @@ export default function Home() {
       <AboutSection/>
       <OurBooks/>
       <ServicesSection/>
+      <ContactSection/>
       
     </div>
   );
