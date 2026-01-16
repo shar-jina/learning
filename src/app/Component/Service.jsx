@@ -5,36 +5,36 @@ import { useEffect, useState, useRef } from "react";
 export default function ServicesSection() {
   const services = [
     {
-      title: "Book Publishing",
+      title: "Fun Learning Materials",
       description:
-        "We bring imaginative children’s stories to life with vibrant illustrations and professional publishing.",
+        "Colorful books and activities designed to spark curiosity, imagination, and early learning skills in children.",
       icon: <Book size={32} />,
     },
     {
-      title: "Global Distribution",
+      title: "Safe Learning Environment",
       description:
-        "Our books reach kids all around the world through online and offline channels.",
+        "A warm, friendly, and child-safe space where kids feel happy, confident, and comfortable while learning.",
       icon: <Globe size={32} />,
     },
     {
-      title: "Award Winning Content",
+      title: "Quality Early Education",
       description:
-        "We ensure quality stories that have won recognition for creativity and educational value.",
+        "Well-planned learning programs that support thinking, creativity, and emotional growth at an early age.",
       icon: <Award size={32} />,
     },
     {
-      title: "Collaborative Authors",
+      title: "Caring & Trained Educators",
       description:
-        "We work closely with talented authors and illustrators to create engaging stories for children.",
+        "Dedicated teachers who guide children patiently and encourage learning through play and interaction.",
       icon: <Users size={32} />,
     },
   ];
 
   const stats = [
-    { title: "Books Published", value: 120 },
-    { title: "Authors Collaborated", value: 35 },
-    { title: "Awards Won", value: 15 },
-    { title: "Countries Reached", value: 12 },
+    { title: "Happy Children", value: 300 },
+    { title: "Learning Activities", value: 120 },
+    { title: "Experienced Educators", value: 25 },
+    { title: "Years of Care", value: 8 },
   ];
 
   const [counts, setCounts] = useState(stats.map(() => 0));
@@ -51,7 +51,7 @@ export default function ServicesSection() {
           }
         });
       },
-      { threshold: 0.3 } // trigger when 30% visible
+      { threshold: 0.3 }
     );
 
     if (sectionRef.current) {
@@ -64,7 +64,7 @@ export default function ServicesSection() {
   }, [hasAnimated]);
 
   const animateCounts = () => {
-    const duration = 2000; // 2 seconds
+    const duration = 2000;
     const intervalTime = 20;
 
     stats.forEach((stat, i) => {
@@ -94,7 +94,7 @@ export default function ServicesSection() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-purple-600 mb-12 text-center">
-          Our Services & Achievements
+          How We Support Early Learning
         </h2>
 
         {/* Services Grid */}
@@ -115,12 +115,12 @@ export default function ServicesSection() {
           ))}
         </div>
 
-        {/* Animated Stats Card */}
+        {/* Animated Stats */}
         <div className="bg-purple-600 text-white rounded-3xl shadow-2xl p-12 flex flex-col md:flex-row justify-around items-center gap-8">
           {stats.map((stat, index) => (
             <div key={index} className="text-center">
               <h3 className="text-4xl font-bold">
-                {counts[index]}{stat.title === "Books Published" ? "+" : ""}
+                {counts[index]}+
               </h3>
               <p className="mt-2">{stat.title}</p>
             </div>

@@ -7,21 +7,24 @@ export default function Hero() {
   const slides = [
     {
       image: "/images/hero1.jpg",
-      title: "Magical Stories for Young Minds",
-      description: "Discover books that spark imagination and creativity.",
-      button: "Browse Books",
+      title: "Learning Begins with Joy",
+      description:
+        "Colorful books designed to make early learning fun, simple, and engaging.",
+      button: "Explore Books",
     },
     {
       image: "/images/hero2.jpg",
-      title: "Fun & Educational Adventures",
-      description: "Stories that entertain while teaching valuable lessons.",
-      button: "Discover Stories",
+      title: "Build Strong Basics Early",
+      description:
+        "Thoughtfully crafted content that supports reading, writing, and thinking skills.",
+      button: "View Collection",
     },
     {
       image: "/images/hero3.jpg",
-      title: "Inspire a Love of Reading",
-      description: "Engaging books for children of all ages.",
-      button: "Explore Our Collection",
+      title: "Books That Children Love",
+      description:
+        "Stories, activities, and practice books created for curious young minds.",
+      button: "Browse Now",
     },
   ];
 
@@ -32,7 +35,9 @@ export default function Hero() {
     return () => clearInterval(timer);
   }, []);
 
-  const nextSlide = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const nextSlide = () =>
+    setCurrent((prev) => (prev + 1) % slides.length);
+
   const prevSlide = () =>
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
 
@@ -52,7 +57,9 @@ export default function Hero() {
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             {slides[current].title}
           </h1>
-          <p className="text-lg md:text-xl mb-6">{slides[current].description}</p>
+          <p className="text-lg md:text-xl mb-6">
+            {slides[current].description}
+          </p>
           <button className="bg-purple-600 px-6 py-3 rounded-full hover:bg-purple-700 transition">
             {slides[current].button}
           </button>
@@ -64,16 +71,16 @@ export default function Hero() {
         <button
           onClick={prevSlide}
           className="w-14 h-14 rounded-full flex items-center justify-center
-            bg-white/20 backdrop-blur-md border border-white/40
-            text-white text-2xl hover:bg-white/30 transition"
+          bg-white/20 backdrop-blur-md border border-white/40
+          text-white text-2xl hover:bg-white/30 transition"
         >
           &#8592;
         </button>
         <button
           onClick={nextSlide}
           className="w-14 h-14 rounded-full flex items-center justify-center
-            bg-white/20 backdrop-blur-md border border-white/40
-            text-white text-2xl hover:bg-white/30 transition"
+          bg-white/20 backdrop-blur-md border border-white/40
+          text-white text-2xl hover:bg-white/30 transition"
         >
           &#8594;
         </button>

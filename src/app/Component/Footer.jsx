@@ -1,3 +1,4 @@
+import { Youtube } from "lucide-react";
 export default function Footer() {
   return (
     <footer className="bg-gray-900 text-gray-300 pt-16 pb-8">
@@ -40,9 +41,10 @@ export default function Footer() {
         <div>
           <h4 className="text-white font-semibold mb-4">Contact</h4>
           <ul className="space-y-2">
-            <li>📧 info@kidslearningbooks.com</li>
-            <li>📞 +91 98765 43210</li>
-            <li>📍 Kerala, India</li>
+            <li>📧 hallmarkpublishers@gmail.com</li>
+            <li>📞 +91 98470 33607</li>
+            <li>📍 KRL Road,Kundannoor,Kochi</li>
+            
           </ul>
         </div>
       </div>

@@ -13,14 +13,10 @@ export default function Navbar() {
         {/* Desktop Menu */}
         <ul className="hidden md:flex items-center gap-8 text-gray-700">
           <li><a href="/" className="hover:text-purple-600">Home</a></li>
-          <li><a href="#about" className="hover:text-purple-600">About</a></li>
-          <li><a href="#programs" className="hover:text-purple-600">Programs</a></li>
-          <li><a href="#contact" className="hover:text-purple-600">Contact</a></li>
-          <li>
-            <a href="#enroll" className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700">
-              Enroll Now
-            </a>
-          </li>
+          <li><a href="/About" className="hover:text-purple-600">About</a></li>
+          <li><a href="/Collection" className="hover:text-purple-600">Collection</a></li>
+          <li><a href="#Contact" className="hover:text-purple-600">Contact</a></li>
+         
         </ul>
 
         {/* Mobile Button */}
@@ -39,14 +35,10 @@ export default function Navbar() {
         <ul className="md:hidden absolute top-full left-0 w-full bg-white text-gray-700 shadow-md flex flex-col items-center gap-4 py-4 z-50">
 
           <li><a href="/" className="hover:text-purple-600" onClick={() => setIsOpen(false)}>Home</a></li>
-          <li><a href="#about" className="hover:text-purple-600" onClick={() => setIsOpen(false)}>About</a></li>
-          <li><a href="#programs" className="hover:text-purple-600" onClick={() => setIsOpen(false)}>Programs</a></li>
+          <li><a href="/About" className="hover:text-purple-600" onClick={() => setIsOpen(false)}>About</a></li>
+          <li><a href="/Gallery" className="hover:text-purple-600" onClick={() => setIsOpen(false)}>Gallery</a></li>
           <li><a href="#contact" className="hover:text-purple-600" onClick={() => setIsOpen(false)}>Contact</a></li>
-          <li>
-            <a href="#enroll" className="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700" onClick={() => setIsOpen(false)}>
-              Enroll Now
-            </a>
-          </li>
+          
         </ul>
       )}
     </nav>

@@ -1,39 +1,31 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Link from "next/link";
 
 export default function OurBooks() {
- const books = [
+  const books = [
     {
       title: "I Love Nature",
       author: "Soave Diare",
-      image: "/images/book2.jpg",
+      image: "/images/book1.jpeg",
     },
     {
       title: "We are Moving Away",
       author: "Nina Nill",
-      image: "/images/book3.jpg",
+      image: "/images/book2.jpeg",
     },
     {
       title: "The Stories Of God",
       author: "Dave Connis",
-      image: "/images/book4.jpg",
+      image: "/images/book3.jpeg",
     },
     {
       title: "Tonya and her Perfect Tea",
       author: "Alina Slyshik",
-      image: "/images/book5.jpg",
+      image: "/images/book4.jpeg",
     },
-    {
-      title: "I can Be All Three",
-      author: "Salima Alikhan",
-      image: "/images/book6.jpg",
-    },
-    {
-      title: "No One Owns The Color",
-      author: "Gianna Davy",
-      image: "/images/book7.jpg",
-    },
+
   ];
 
   const [activeIndex, setActiveIndex] = useState(null);
@@ -73,12 +65,21 @@ export default function OurBooks() {
                   {book.title}
                 </h3>
                 <p className="text-gray-500 mb-4">{book.author}</p>
-                <button className="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">
-                  View Details
-                </button>
+                <Link href="/Book/1">
+                  <button className="bg-purple-600 text-white px-5 py-2 rounded-full hover:bg-purple-700 transition">
+                    View Details
+                  </button>
+                </Link>
               </div>
             </div>
           ))}
+        </div>
+        <div className="flex align-center justify-center py-18">
+          <Link href='/Collection'>
+          <button className="bg-purple-600 text-white  px-7 py-3 rounded-full hover:bg-purple-700 transition">
+            View More
+          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -1,6 +1,8 @@
 "use client";
 import Image from "next/image";
-import { BookOpen, Star, Smile } from "lucide-react";
+import { BookOpen, Star, Smile,  } from "lucide-react";
+import Link from "next/link";
+
 
 export default function About() {
   return (
@@ -10,7 +12,7 @@ export default function About() {
         <div className="relative w-full h-[420px] rounded-3xl overflow-hidden shadow-xl">
           <Image
             src="/images/about1.jpg"
-            alt="Children reading books"
+            alt="Children learning with colorful books"
             fill
             className="object-cover"
           />
@@ -19,47 +21,56 @@ export default function About() {
         {/* Content */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold text-purple-600 mb-6">
-            About Our Publisher
+            About Our Books
           </h2>
 
           <p className="text-gray-600 leading-relaxed mb-4">
-            We are a children’s book publisher dedicated to creating magical stories
-            that spark imagination and creativity. Our books combine beautiful illustrations
-            with engaging narratives to inspire young readers.
+            We create thoughtfully designed books that help children begin their
+            learning journey with curiosity and confidence. Our content is simple,
+            engaging, and visually rich to keep young minds interested.
           </p>
 
           <p className="text-gray-600 leading-relaxed mb-8">
-            Our collection focuses on entertaining while teaching valuable lessons,
-            encouraging children to love reading and explore their creativity.
+            From early reading and writing to numbers, general knowledge, and
+            creative activities, our books support learning through play,
+            practice, and imagination.
           </p>
 
           {/* Highlights */}
           <div className="space-y-4 mb-8">
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 icon-spin">
                 <BookOpen size={24} />
               </div>
-              <p className="text-gray-600">Creative storytelling that inspires children.</p>
+              <p className="text-gray-600">
+                Simple explanations with colorful illustrations and activities.
+              </p>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 icon-spin">
                 <Star size={24} />
               </div>
-              <p className="text-gray-600">Award-winning authors crafting memorable stories.</p>
+              <p className="text-gray-600">
+                Learning content designed to build strong basics naturally.
+              </p>
             </div>
 
             <div className="flex items-start gap-4">
-              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600">
+              <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 icon-spin">
                 <Smile size={24} />
               </div>
-              <p className="text-gray-600">Fun, educational, and engaging content for all ages.</p>
+              <p className="text-gray-600">
+                A joyful learning experience that children enjoy every day.
+              </p>
             </div>
           </div>
-
+          <Link href='/About'>
           <button className="bg-purple-600 text-white px-7 py-3 rounded-full hover:bg-purple-700 transition">
-            Learn More
+            About More
           </button>
+          </Link>
+          
         </div>
       </div>
     </section>
