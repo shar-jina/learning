@@ -1,3 +1,4 @@
+"use client";
 import { BookOpen, Users, ShieldCheck } from "lucide-react";
 
 export default function FacilitiesSection() {
@@ -26,28 +27,21 @@ export default function FacilitiesSection() {
     <div className="relative z-30">
       {/* Desktop Overlay */}
       <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full max-w-7xl px-6">
-        <div className="bg-white rounded-3xl shadow-2xl p-10">
+        <div className="bg-gray-50 rounded-3xl shadow-2xl p-10">
           <div className="grid md:grid-cols-3 gap-8">
             {facilities.map((item, index) => (
               <div
                 key={index}
-                className="group text-center px-6 py-8 rounded-2xl
-                hover:bg-purple-100 transition shadow-sm"
+                className="group text-center px-6 py-8 rounded-2xl hover:bg-purple-100 transition shadow-sm"
               >
-                <div
-                  className="w-16 h-16 rounded-full bg-purple-100
-                  flex items-center justify-center text-purple-600 mx-auto mb-4
-                  transition-transform duration-500  icon-spin"
-                >
+                <div className="w-16 h-16 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 mx-auto mb-4 transition-transform duration-500 icon-spin">
                   {item.icon}
                 </div>
 
                 <h3 className="text-xl font-semibold text-purple-600 mb-4">
                   {item.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
-                  {item.description}
-                </p>
+                <p className="text-gray-600 leading-relaxed">{item.description}</p>
               </div>
             ))}
           </div>
@@ -55,21 +49,15 @@ export default function FacilitiesSection() {
       </div>
 
       {/* Mobile / Tablet */}
-      <div className="block md:hidden mt-12 px-6">
-        <div className="bg-white rounded-3xl shadow-2xl p-6">
+      <div className="block md:hidden mt-8">
+        <div className="bg-gray-50 rounded-3xl shadow-2xl p-6 mx-4">
           <div className="grid gap-6">
             {facilities.map((item, index) => (
               <div
                 key={index}
-                className="group flex items-start gap-4 p-4
-                rounded-2xl hover:bg-purple-50 transition shadow-sm"
+                className="group flex items-start gap-4 p-4 rounded-2xl hover:bg-purple-50 transition shadow-sm"
               >
-                <div
-                  className="w-12 h-12 rounded-full bg-purple-100
-                  flex items-center justify-center text-purple-600
-                  transition-transform duration-500
-                  group-hover:rotate-[360deg]"
-                >
+                <div className="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 transition-transform duration-500 group-hover:rotate-[360deg]">
                   {item.icon}
                 </div>
 
@@ -85,9 +73,8 @@ export default function FacilitiesSection() {
         </div>
       </div>
 
-      {/* Spacer */}
-      <div className="hidden md:block h-[350px]"></div>
+      {/* Spacer for desktop layout */}
+      <div className="hidden md:block h-[300px]"></div>
     </div>
   );
 }
-
