@@ -3,7 +3,7 @@ import { Eye, Smile, Layers } from "lucide-react";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-purple-50 py-24 flex flex-col items-center gap-12">
+    <main className="min-h-screen bg-purple-50 py-32 flex flex-col items-center gap-12">
       
       {/* Heading */}
       <h1 className="text-4xl md:text-5xl font-bold text-purple-600 mb-6 text-center">

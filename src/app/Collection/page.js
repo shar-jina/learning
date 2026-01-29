@@ -50,7 +50,7 @@ export default function GalleryPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-purple-50 py-24 px-6">
+    <main className="min-h-screen bg-purple-50 py-32 px-6">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
         <h1 className="text-4xl md:text-5xl font-bold text-purple-600 mb-8 text-center">

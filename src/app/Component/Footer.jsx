@@ -6,10 +6,12 @@ export default function Footer() {
 
         {/* Brand */}
         <div>
-          <h3 className="text-2xl font-bold text-white mb-4">
-            Kids Learning
-          </h3>
-          <p className="text-gray-400 leading-relaxed">
+          <img
+          src="/images/logo.png"
+          alt="Kids Learning Logo"
+          className="h-15 w-auto"
+        />
+          <p className="text-gray-400 leading-relaxed mt-2">
             Publishing engaging books and learning materials that inspire
             curiosity, creativity, and confidence in children.
           </p>
